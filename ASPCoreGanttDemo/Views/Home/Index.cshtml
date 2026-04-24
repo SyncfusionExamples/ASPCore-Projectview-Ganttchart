@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Gantt Demo";
+}
+
+<ejs-gantt id='Resources' dataSource="ViewBag.dataSource"
+           treeColumnIndex="1" height="450px" allowSelection="true" highlightWeekends="true"
+           resources="ViewBag.projectResources" rowHeight="46"
+           projectStartDate="01/28/2019" projectEndDate="03/10/2019"
+           toolbar="@(new List<string>() { "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll" })">    
+    <e-gantt-resourcefields id="ResourceId" name="ResourceName" unit="ResourceUnit">
+    </e-gantt-resourcefields>
+    <e-gantt-taskfields id="TaskId" name="TaskName" startDate="StartDate"
+                        endDate="EndDate" duration="Duration" progress="Progress" dependency="Predecessor"
+                        parentID="ParentID" work="Work" resourceInfo="Resources">
+    </e-gantt-taskfields>
+    <e-gantt-splitterSettings columnIndex="2.1"></e-gantt-splitterSettings>
+    <e-gantt-labelSettings rightLabel="#rightLabel"></e-gantt-labelSettings>
+    <e-gantt-columns>
+        <e-gantt-column field="TaskId" visible="false"></e-gantt-column>
+        <e-gantt-column field="TaskName" headerText="Task Name" width="180"></e-gantt-column>
+        <e-gantt-column field="Resources" headerText="Resources" width="160"></e-gantt-column>
+        <e-gantt-column field="Work" width="110"></e-gantt-column>
+        <e-gantt-column field="Duration" width="100"></e-gantt-column>
+        <e-gantt-column field="TaskType" headerText="Task Type" width="110"></e-gantt-column>
+    </e-gantt-columns>
+    <e-gantt-timelinesettings>
+        <e-timelinesettings-toptier unit="Week" format="MMM dd, y"></e-timelinesettings-toptier>
+        <e-timelinesettings-bottomtier unit="Day"></e-timelinesettings-bottomtier>
+    </e-gantt-timelinesettings>
+    <e-gantt-editsettings allowAdding="true" allowEditing="true" allowDeleting="true"
+                          allowTaskbarEditing="true" showDeleteConfirmDialog="true"></e-gantt-editsettings>
+    <e-gantt-editdialogfields>
+        <e-gantt-editdialogfield type="General"></e-gantt-editdialogfield>
+        <e-gantt-editdialogfield type="Dependency"></e-gantt-editdialogfield>
+        <e-gantt-editdialogfield type="Resources"></e-gantt-editdialogfield>
+    </e-gantt-editdialogfields>    
+</ejs-gantt>
+<script type="text/x-template" id="rightLabel">
+    <div style="margin-top=-7px;">
+        ${if(ganttProperties.resourceInfo)}
+        <div id="rightLabel">
+            ${getResourceElements(ganttProperties.resourceInfo)}
+        </div>
+        ${/if}
+    </div>
+</script>
+
+<script>
+    function getResourceElements(value) {
+        var out = "";
+        var img = document.createElement('img');
+        img.height = 40;
+        var span = document.createElement('span');
+        span.style.marginLeft = "5px";
+        span.style.marginRight = "5px";
+        for (var index = 0; index < value.length; index++) {
+            img.src = '../images/' + value[index].ResourceName + '.png';
+            span.innerHTML = value[index].ResourceName;
+            out = out + img.outerHTML + span.outerHTML;
+        }
+        return out;
+    }
+
+</script>
