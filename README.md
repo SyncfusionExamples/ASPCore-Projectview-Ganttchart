@@ -31,7 +31,7 @@ This repository contains a sample ASP.NET Core MVC application that demonstrates
 
 ## References
 
-- [Explore ASP.NET Core Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart)
+- [Explore ASP.NET Core Gantt Chart](https://www.syncfusion.com/aspnet-core-ui-controls/gantt-chart)
 - [Documentation](https://ej2.syncfusion.com/aspnetcore/documentation/gantt/resources)
 - [ASP.NET Core Gantt Chart Getting Started Guide](https://ej2.syncfusion.com/aspnetcore/documentation/gantt/getting-started)
 - [ASP.NET Core Gantt Chart Live Demos](https://ej2.syncfusion.com/aspnetcore/gantt/resources#/fluent2)
