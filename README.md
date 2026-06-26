@@ -1,6 +1,6 @@
 ﻿# ASP.NET Core Gantt Chart - Project View Demo
 
-This repository contains a sample ASP.NET Core MVC application that demonstrates how to implement a project scheduling interface using the Syncfusion ASP.NET Core Gantt Chart component.
+This repository contains a sample ASP.NET Core MVC application that demonstrates how to implement a project scheduling interface using the [ASP.NET Core Gantt Chart](https://www.syncfusion.com/aspnet-core-ui-controls/gantt-chart) component.
 
 ## Features
 
@@ -31,4 +31,7 @@ This repository contains a sample ASP.NET Core MVC application that demonstrates
 
 ## References
 
-- Syncfusion Essential JS 2 Gantt: https://ej2.syncfusion.com/aspnetcore/documentation/gantt/resources
+- [Explore ASP.NET Core Gantt Chart](https://www.syncfusion.com/aspnet-core-ui-controls/gantt-chart)
+- [Documentation](https://ej2.syncfusion.com/aspnetcore/documentation/gantt/resources)
+- [ASP.NET Core Gantt Chart Getting Started Guide](https://ej2.syncfusion.com/aspnetcore/documentation/gantt/getting-started)
+- [ASP.NET Core Gantt Chart Live Demos](https://ej2.syncfusion.com/aspnetcore/gantt/resources#/fluent2)
